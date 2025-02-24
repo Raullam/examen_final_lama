@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'models/usuari.dart';
+import 'preferencies/preferencies.dart';
 import 'providers/usuari_provider.dart';
+import 'screens/home_screen.dart';
 import 'screens/login_screens.dart';
 // Autor : Raül Lama Martorell
 
@@ -12,6 +15,7 @@ import 'screens/login_screens.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized(); // Inicialitzem els Widgets
+  await Preferencies.init(); // Inicialitzem SharedPreferences
   runApp(MultiProvider(
     providers: [
       // Inicialitzem els providers
@@ -25,13 +29,19 @@ void main() async {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    final recordarCredencials =
+        Preferencies.correu.isNotEmpty && Preferencies.contrasenya.isNotEmpty;
+    final usuri1 = UsuariApp(
+      email: Preferencies.correu,
+      contrasenya1: Preferencies.contrasenya,
+    );
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Exemen',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: LoginPage(), // Página d'inici
+      home: recordarCredencials ? HomePage(usuari: usuri1) : LoginPage(),
     );
   }
 }

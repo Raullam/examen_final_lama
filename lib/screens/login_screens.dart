@@ -47,12 +47,6 @@ class _LoginPageState extends State<LoginPage> {
             email: Preferencies.correu,
             contrasenya1: Preferencies.contrasenya,
           );
-          Navigator.push(
-            context,
-            MaterialPageRoute(
-              builder: (context) => HomePage(usuari: usuri1),
-            ),
-          );
         }
       }
     });
@@ -134,12 +128,12 @@ class _LoginPageState extends State<LoginPage> {
             // TextFields per a introduir les credencials de l'usuari
             TextField(
               controller: _correuController,
-              style: TextStyle(color: Colors.white),
+              style: TextStyle(color: Colors.black),
               decoration: InputDecoration(hintText: 'Correu electrònic'),
             ),
             TextField(
               controller: _contrasenyaController,
-              style: TextStyle(color: Colors.white),
+              style: TextStyle(color: Colors.black),
               obscureText: true,
               decoration: InputDecoration(hintText: 'Contrasenya'),
             ),

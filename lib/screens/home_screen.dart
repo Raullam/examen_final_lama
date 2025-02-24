@@ -1,3 +1,4 @@
+import 'package:examen_final_lama/screens/login_screens.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -25,7 +26,9 @@ class HomePage extends StatelessWidget {
       body: Column(
         children: [
           ElevatedButton(
-              onPressed: () => Navigator.pop(context), child: Text('Logout'))
+              onPressed: () => Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => LoginPage())),
+              child: Text('Login'))
         ],
       ),
     );

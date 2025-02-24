@@ -10,7 +10,6 @@ class Preferencies {
 
   static String _correu = '';
   static String _contrasenya = '';
-  bool _recordarCredencials = false;
 
   // Inicialitza SharedPreferences
   static Future init() async {

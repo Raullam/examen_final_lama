@@ -1,6 +1,7 @@
 // Autor : Raül Lama Martorell
-// Data: 20 de 02 de 2025
-// Versió 1.0
+
+// He tengut error a l'hora de afegir usuaris a la llista de la api i no he pogut mostrar la llista de usuaris de la api
+// encara que si hi haguesin usuaris a la llista es mostrerien pero no ho he pogut mostrar
 
 // Classe que defineix el model dels usuaris de l'API
 class Usuari {
@@ -32,7 +33,7 @@ class Usuari {
         cognom2: json["cognom2"] ?? "Sense cognom2",
       );
 
-// Per enviar dades a en format JSON
+// Per enviar dades a en format JSON per fer l'insert a la API
   Map<String, dynamic> toMap() => {
         "address": id,
         "nom": nom,

@@ -106,15 +106,13 @@ class _LoginPageState extends State<LoginPage> {
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
             content: Text(
-                'Usuari o contrasenya incorrectes, registrat de nou si tenies les credencials guardades')),
+                'Usuari o contrasenya incorrectes, introdueix l\'usuari de prova \' raul@gmail.com \' i la contrasenya \' 123456 \'')),
       );
     }
   }
 
   @override
   Widget build(BuildContext context) {
-    // final themeProvider = Provider.of<ThemeProvider>(context);
-
     return Scaffold(
       appBar: AppBar(
         title: Text('Pàgina de login'),
@@ -166,37 +164,12 @@ class _LoginPageState extends State<LoginPage> {
               ],
             ),
             SizedBox(height: 30),
-            // Switch per canviar entre mode clar i fosc de l'aplicació en temps real sense haver de reiniciar l'aplicació per veure els canvis.
-            // Si el Switch està activat, el tema de l'aplicació canviarà a fosc i es guardarà l'estat del tema a Preferencies.
-            // Si el Switch està desactivat, el tema de l'aplicació canviarà a clar i es guardarà l'estat del tema a Preferencies.
-            // Això ho fem cridant el mètode setDarkMode o setLightMode del provider ThemeProvier i cridant el mètode isDarkMode de Preferencies
-            //per guardar l'estat del tema i finalment cridant el mètode notifyListeners() per notificar als widgets que depenen d'aquesta classe
-            //que el tema ha canviat.
 
-            // SwitchListTile(
-            //     value: Preferencies.isDarkMode,
-            //     title: const Text('Dark Mode'),
-            //     onChanged: (value) {
-            //       Preferencies.isDarkMode = value;
-            //       if (value) {
-            //         themeProvider.setDarkMode();
-            //       } else {
-            //         themeProvider.setLightMode();
-            //       }
-            //     }),
-
-            // Botons per a iniciar sessió o registrar-se
+            // Boto per a iniciar sessió
             ElevatedButton(
               onPressed: _iniciarSessio,
               child: Text('Iniciar sessió'),
             ),
-            // ElevatedButton(
-            //   onPressed: () {
-            //     Navigator.push(context,
-            //         MaterialPageRoute(builder: (context) => Register()));
-            //   },
-            //   child: Text('Registrar-se'),
-            // ),
           ],
         ),
       ),

@@ -34,8 +34,29 @@ class DetallUsuari extends StatelessWidget {
               ),
               SizedBox(height: 20),
               Text(
-                usuari.nom,
+                usuari.id,
                 style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
+                textAlign: TextAlign.center, // Text centrat
+              ),
+              SizedBox(height: 10),
+              Text(
+                usuari.nom,
+                style: TextStyle(fontSize: 18),
+                textAlign: TextAlign.center, // Text centrat
+              ),
+              Text(
+                usuari.cognom1,
+                style: TextStyle(fontSize: 18),
+                textAlign: TextAlign.center, // Text centrat
+              ),
+              Text(
+                usuari.cognom2,
+                style: TextStyle(fontSize: 18),
+                textAlign: TextAlign.center, // Text centrat
+              ),
+              Text(
+                usuari.descripcio,
+                style: TextStyle(fontSize: 18),
                 textAlign: TextAlign.center, // Text centrat
               ),
             ],

@@ -1,3 +1,4 @@
+import 'package:examen_final_lama/providers/usuariApi_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'models/usuari.dart';
@@ -21,6 +22,7 @@ void main() async {
       // Inicialitzem els providers
 
       ChangeNotifierProvider(create: (context) => UsuarisAppProvider()),
+      ChangeNotifierProvider(create: (context) => UsuariAPIProvider()),
     ],
     child: MyApp(),
   ));

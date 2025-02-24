@@ -4,8 +4,6 @@ import 'dart:convert';
 
 import '../models/usuarisApi.dart';
 // Autor : Raül Lama Martorell
-// Data: 20 de 02 de 2025
-// Versió 1.0
 
 // Provider avançat per a gestionar els usuaris de la API
 class UsuariAPIProvider extends ChangeNotifier {
@@ -21,6 +19,7 @@ class UsuariAPIProvider extends ChangeNotifier {
     notifyListeners();
 
     try {
+      // aqui posam la ruta de els usuaris de la api
       final response = await http.get(Uri.parse(
           'https://examenfinallama.free.beeceptor.com/users')); // URL de ejemplo
 
